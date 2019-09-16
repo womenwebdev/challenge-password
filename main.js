@@ -9,7 +9,7 @@ class PasswordRevealer {
     if (!inputId) {
       throw new Error(this.errorMessage);
     }
-    this.getElement(inputId); //metodos
+    this.getElement(inputId);
     this.build();
     this.strength();
     this.showPassword();
