@@ -6,9 +6,7 @@ class PasswordRevealer {
   errorMessage = "You must pass and ID in the constructor";
 
   constructor(inputId) {
-    //metodo que vai ser chamado assim que a classe for instanciada
     if (!inputId) {
-      //!Input ID é igual a false se tiver !
       throw new Error(this.errorMessage);
     }
     this.getElement(inputId); //metodos
