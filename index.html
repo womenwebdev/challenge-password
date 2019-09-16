@@ -1,50 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Password Challenge</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
+
   <body>
-    <input type="password" id="password" />
+    <div class="title">
+      <div class="title-img">
+        <img src="padlock.png" />
+      </div>
 
+      <h1 class="title-heading">
+        PASSWORD REVEALER
+      </h1>
+    </div>
+
+    <input id="password" type="password" />
+
+    <script src="main.js"></script>
     <script>
-      class PasswordRevealer {
-        element = " ";
-
-        constructor(inputId) {
-          this.getInput(inputId);
-          this.style();
-          this.build();
-        }
-
-        getInput(inputId) {
-          this.element = document.getElementById(inputId);
-        }
-
-        build() {
-          const container = document.createElement("div");
-          this.element.parentNode.insertBefore(
-            container,
-            this.element.nextSibling
-          );
-          container.appendChild(this.element);
-
-          const eye = document.createElement("div");
-          eye.innerHTML = "EYE";
-          container.appendChild(eye);
-
-          const strength = document.createElement("div");
-          strength.innerHTML = "strength";
-          container.appendChild(strength);
-        }
-
-        style() {
-          this.element.style.backgroundColor = "grey";
-        }
-      }
-
       const password = new PasswordRevealer("password");
     </script>
   </body>
